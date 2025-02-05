@@ -54,7 +54,7 @@ $result = $conn->query($sql);
                 echo "</tr>";
             }
         } else {
-            echo "<tr><td colspan='9'>No hay registross</td></tr>";
+            echo "<tr><td colspan='9'>No hay registros</td></tr>";
         }
         ?>
         </tbody>
