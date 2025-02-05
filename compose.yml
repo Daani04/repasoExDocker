@@ -1,12 +1,12 @@
 services:
   db:
-    image: danii04/mi_cineRepasoExamen:v1
+    image: danii04/mi_cine_repaso_examen:v1
     container_name: contenedorMiCineRepasoExamen
     ports:
       - "3306:3306"
 
   php:
-    image: danii04/mi_app_cineRepasoExamen:v1
+    image: danii04/mi_app_cine_repaso_examen:v1
     container_name: contenedorMiAppRepasoExamen
     ports:
       - "8080:80"
