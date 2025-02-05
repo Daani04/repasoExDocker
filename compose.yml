@@ -1,12 +1,14 @@
+version: '3'
+
 services:
   db:
-    image: danii04/mi_cine_repaso_examen:v1
+    image: danii04/mi_cine_repaso_examen:v1  # Usamos la imagen correcta para la base de datos
     container_name: contenedorMiCineRepasoExamen
     ports:
       - "3306:3306"
 
   php:
-    image: danii04/mi_app_cine_repaso_examen:v1
+    image: danii04/mi_app_cine_repaso_examen:v1  # Usamos la imagen correcta para la aplicación
     container_name: contenedorMiAppRepasoExamen
     ports:
       - "8080:80"

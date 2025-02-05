@@ -1,4 +1,8 @@
+# Usamos la imagen base de PHP con Apache
 FROM php:8.2-apache
-# Instala y habilita la extensión mysqli
+
+# Instalamos y habilitamos la extensión mysqli
 RUN docker-php-ext-install mysqli && docker-php-ext-enable mysqli
+
+# Copiamos el código de la aplicación a la carpeta correspondiente en el contenedor
 COPY . /var/www/html/mi_app_cine_repaso_examen

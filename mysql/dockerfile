@@ -1,6 +1,11 @@
+# Usamos la imagen base de MySQL
 FROM mysql:latest
+
+# Configuramos las variables de entorno para MySQL
 ENV MYSQL_ROOT_PASSWORD=contrasenyaRoot
 ENV MYSQL_DATABASE=cine
 ENV MYSQL_USER=usuario1
 ENV MYSQL_PASSWORD=contrasenyaUsuario1
+
+# Copiamos el archivo SQL para inicializar la base de datos
 COPY cine.sql /docker-entrypoint-initdb.d/
