@@ -22,7 +22,6 @@ $result = $conn->query($sql);
 </head>
 <body>
     <h1>Listado de Películas</h1>
-    <a href="añadir.php">Añadir una película</a> 
     <table border="1">
         <thead>
             <tr>
@@ -50,7 +49,6 @@ $result = $conn->query($sql);
                 echo "<td>" . htmlspecialchars($row["presupuesto"]) . "</td>";
                 echo "<td><img src='data:image/jpeg;base64," . htmlspecialchars($row["img_base64"]) . "' alt='Imagen' width='100' height='100'></td>";
                 echo "<td><a href='" . htmlspecialchars($row["url_trailer"]) . "' target='_blank'>Ver Trailer</a></td>";
-                echo "<td><a href='eliminar.php?id=" . $row["id"] . "'><img src='papelera.png' alt='Eliminar' width='50' height='50'></a></td>";  
                 echo "</tr>";
             }
         } else {
